@@ -1,0 +1,19 @@
+id: P-DOUBLE-PROGRESSION
+topic: progression
+statement:
+  it: Si aumenta il carico di un passo quando tutte le serie raggiungono il massimo dell'intervallo al
+    RIR previsto; altrimenti si cerca una ripetizione in più.
+  en: Load goes up one step when every set reaches the top of the range at the planned RIR; otherwise
+    aim for one more rep.
+evidence: design
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/progression
+sources:
+- id: barbl-design
+  access: full_text
+- id: acsm-2026-resistance-training
+  pages:
+  - 863
+  access: full_text

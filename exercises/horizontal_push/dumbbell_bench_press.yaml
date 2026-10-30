@@ -1,0 +1,22 @@
+id: dumbbell_bench_press
+name:
+  it: Panca piana con manubri
+  en: Dumbbell bench press
+equipment: dumbbell
+requires:
+- dumbbells
+- bench
+pattern: horizontal_push
+mechanics: compound
+muscles:
+  primary: chest
+  secondary:
+  - triceps
+  - front_delts
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- barbell_bench_press
+- machine_chest_press
+- push_up

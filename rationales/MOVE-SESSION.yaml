@@ -1,0 +1,9 @@
+ruleId: MOVE-SESSION
+key: move.rest
+level: session
+text:
+  it: Servono almeno {hours} ore tra due sedute per gli stessi muscoli.
+  en: You need at least {hours} hours between two sessions for the same muscles.
+exampleValues:
+  hours: 48
+sourcesFrom: parameters/move

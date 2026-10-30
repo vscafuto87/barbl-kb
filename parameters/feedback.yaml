@@ -1,0 +1,11 @@
+group: feedback
+target: parameters
+ruleId: EXERCISE-FEEDBACK
+values:
+  easy: plus_one_step
+  atLimit: no_increase
+  discomfort: suggest_swap
+  discomfortAlwaysAfter: 2
+provisional: true
+principles:
+- P-FEEDBACK-DESIGN

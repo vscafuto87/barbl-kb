@@ -1,0 +1,13 @@
+id: P-RECOVERY-48H
+topic: recovery
+statement:
+  it: Gli arti inferiori recuperano in 48-72 ore, i superiori in 24 o meno.
+  en: Lower-body muscles recover in 48-72 hours, upper-body in 24 or less.
+evidence: medium
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/move
+sources:
+- id: sousa-2024-recovery-microcycle
+  access: full_text

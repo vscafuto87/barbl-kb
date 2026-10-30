@@ -1,0 +1,18 @@
+id: leg_extension
+name:
+  it: Leg extension
+  en: Leg extension
+equipment: machine
+requires:
+- machines
+pattern: knee_extension
+mechanics: isolation
+muscles:
+  primary: quadriceps
+  secondary: []
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- goblet_squat
+- bulgarian_split_squat

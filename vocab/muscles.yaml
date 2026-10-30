@@ -1,0 +1,21 @@
+# Muscoli usati dalla KB e dal piano (campo `muscles` dell'esercizio del contratto).
+# Gli id dei primi nove sono quelli già usati dal piano fisso dell'app.
+# `region` serve alla regola 13 (Sposta seduta): ore minime di recupero per parte alta o bassa.
+muscles:
+  - { id: chest,       name: { it: Petto,            en: Chest },          region: upper }
+  - { id: back,        name: { it: Dorso,            en: Back },           region: upper }
+  - { id: shoulders,   name: { it: Spalle,           en: Shoulders },      region: upper }
+  - { id: front_delts, name: { it: Deltoidi anteriori, en: Front delts },  region: upper }
+  - { id: triceps,     name: { it: Tricipiti,        en: Triceps },        region: upper }
+  - { id: biceps,      name: { it: Bicipiti,         en: Biceps },         region: upper }
+  - { id: quadriceps,  name: { it: Quadricipiti,     en: Quadriceps },     region: lower }
+  - { id: hamstrings,  name: { it: Femorali,         en: Hamstrings },     region: lower }
+  - { id: glutes,      name: { it: Glutei,           en: Glutes },         region: lower }
+  - { id: calves,      name: { it: Polpacci,         en: Calves },         region: lower }
+
+# Peso di una serie sui muscoli dell'esercizio, per contare il volume in modo frazionario
+# (principio P-VOL-FRACTIONAL). Solo il motore lo usa: nel piano `muscles` resta un elenco
+# ordinato con il primario per primo (decisione del 30 ottobre 2026).
+setWeights:
+  primary: 1.0
+  secondary: 0.5

@@ -1,0 +1,21 @@
+id: smith_machine_bench_press
+name:
+  it: Panca piana al multipower
+  en: Smith machine bench press
+equipment: smith_machine
+requires:
+- smith_machine
+- bench
+pattern: horizontal_push
+mechanics: compound
+muscles:
+  primary: chest
+  secondary:
+  - triceps
+  - front_delts
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- barbell_bench_press
+- dumbbell_bench_press

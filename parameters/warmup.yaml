@@ -1,0 +1,17 @@
+group: warmup
+target: parameters
+ruleId: WARMUP
+values:
+  minLoadKg: 40
+  scheme:
+  - - 0.5
+    - 8
+  - - 0.7
+    - 5
+  thirdSetFromKg: 60
+  thirdSet:
+  - 0.85
+  - 2
+provisional: true
+principles:
+- P-WARMUP-HEAVY

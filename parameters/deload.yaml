@@ -1,0 +1,11 @@
+group: deload
+target: parameters
+ruleId: DELOAD
+values:
+  setsFactor: 0.5
+  rirTarget: 4
+  loadFromWeek: 1
+  minSetsPerExercise: 1
+provisional: true
+principles:
+- P-DELOAD-REDUCE-VOLUME

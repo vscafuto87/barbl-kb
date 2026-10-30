@@ -1,0 +1,12 @@
+id: reynolds-2006-1rm-prediction
+type: validation_study
+tier: 3
+title: Prediction of One Repetition Maximum Strength from Multiple Repetition Maximum Testing and Anthropometry
+authors:
+- Reynolds JM
+- Gordon TJ
+- Robergs RA
+year: 2006
+reference: J Strength Cond Res 20(3):584-592
+use: public
+readNote: Studio di validazione su 70 soggetti; letto il testo completo (copia degli autori).

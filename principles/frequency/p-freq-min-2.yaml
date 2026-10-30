@@ -1,0 +1,17 @@
+id: P-FREQ-MIN-2
+topic: frequency
+statement:
+  it: Ogni grande gruppo muscolare va allenato almeno due volte a settimana; per la forza servono almeno
+    2 sedute a settimana.
+  en: Train every major muscle group at least twice a week; strength needs at least 2 sessions a week.
+evidence: high
+status: provisional
+reviewedBy: null
+feeds:
+- templates
+sources:
+- id: acsm-2026-resistance-training
+  pages:
+  - 851
+  - 855
+  access: full_text

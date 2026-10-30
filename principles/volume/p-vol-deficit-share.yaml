@@ -1,0 +1,15 @@
+id: P-VOL-DEFICIT-SHARE
+topic: volume
+statement:
+  it: Sotto fascia si recupera metà del deficit, con un tetto per esercizio e per seduta, per non allungare
+    troppo la seduta.
+  en: Below the band, half of the deficit is added back, capped per exercise and per session, so sessions
+    do not grow too long.
+evidence: design
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/belowBand
+sources:
+- id: barbl-design
+  access: full_text

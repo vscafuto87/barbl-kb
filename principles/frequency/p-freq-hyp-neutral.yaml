@@ -1,0 +1,19 @@
+id: P-FREQ-HYP-NEUTRAL
+topic: frequency
+statement:
+  it: 'A parità di volume la frequenza non cambia l''ipertrofia (da 1 a più di 5 giorni a settimana):
+    serve a distribuire il volume.'
+  en: 'With volume equated, frequency does not change hypertrophy (from 1 to more than 5 days a week):
+    it is a way to distribute volume.'
+evidence: high
+status: provisional
+reviewedBy: null
+feeds:
+- templates
+sources:
+- id: acsm-2026-resistance-training
+  pages:
+  - 856
+  access: full_text
+- id: pelland-2026-volume-frequency
+  access: full_text_preprint

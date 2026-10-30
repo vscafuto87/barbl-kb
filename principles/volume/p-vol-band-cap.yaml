@@ -1,0 +1,15 @@
+id: P-VOL-BAND-CAP
+topic: volume
+statement:
+  it: Il tetto della fascia di volume (16 serie) è sotto la soglia oltre cui i rendimenti calano ed è
+    scelto per contenere la durata delle sedute.
+  en: The volume band ceiling (16 sets) sits below the point of diminishing returns and is chosen to keep
+    sessions short.
+evidence: design
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/belowBand
+sources:
+- id: barbl-design
+  access: full_text

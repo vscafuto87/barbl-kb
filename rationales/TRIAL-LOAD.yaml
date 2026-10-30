@@ -1,0 +1,10 @@
+ruleId: TRIAL-LOAD
+key: trial.load
+level: set
+text:
+  it: 'Dalla serie di prova stimo un massimale di {e1rm} kg: oggi lavori a {kg} kg.'
+  en: 'From your test set I estimate a {e1rm} kg max: today you work at {kg} kg.'
+exampleValues:
+  e1rm: 80
+  kg: 62.5
+sourcesFrom: parameters/trialLoad

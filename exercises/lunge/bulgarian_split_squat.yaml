@@ -1,0 +1,20 @@
+id: bulgarian_split_squat
+name:
+  it: Affondi bulgari
+  en: Bulgarian split squat
+equipment: dumbbell
+requires:
+- dumbbells
+- bench
+pattern: lunge
+mechanics: compound
+muscles:
+  primary: quadriceps
+  secondary:
+  - glutes
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- dumbbell_walking_lunge
+- goblet_squat

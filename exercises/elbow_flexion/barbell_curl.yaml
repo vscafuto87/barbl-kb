@@ -1,0 +1,18 @@
+id: barbell_curl
+name:
+  it: Curl con bilanciere
+  en: Barbell curl
+equipment: barbell
+requires:
+- barbell
+pattern: elbow_flexion
+mechanics: isolation
+muscles:
+  primary: biceps
+  secondary: []
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- dumbbell_curl
+- cable_curl

@@ -1,0 +1,15 @@
+ruleId: VOL-BAND
+key: volume.belowBand
+level: session
+text:
+  it: '{muscle}: {weeklySets} serie questa settimana, sotto la fascia di {bandMin}–{bandMax}. Aggiungo
+    {addedSets} serie.'
+  en: '{muscle}: {weeklySets} sets this week, below the {bandMin}–{bandMax} range. Adding {addedSets}
+    sets.'
+exampleValues:
+  muscle: Femorali
+  weeklySets: 6
+  bandMin: 10
+  bandMax: 16
+  addedSets: 2
+sourcesFrom: parameters/belowBand

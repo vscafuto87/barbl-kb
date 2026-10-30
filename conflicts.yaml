@@ -1,0 +1,37 @@
+conflicts:
+- id: C-TRIAL-1RM
+  status: resolved
+  date: '2026-10-30'
+  between:
+  - P-1RM-ESTIMATE-RANGE
+  - parameters/trialLoad
+  summary:
+    it: Helms e Reynolds indicano che la stima del massimale peggiora oltre le 5-10 ripetizioni; la regola
+      14 fa la serie di prova alle ripetizioni del target.
+  resolution:
+    it: 'Conflitto solo apparente: la prova converte su 1-3 ripetizioni e l''errore della formula si annulla
+      quasi del tutto. Il rischio vero è il RIR dichiarato (P-RIR-ACCURACY): rirRepeat portato da 5 a
+      4 e vincolo del motore maxRepsPlusRir = 10. Decisione di Vincenzo, pull request barbl#31.'
+- id: C-RULE8-FRACTIONAL
+  status: deferred
+  date: '2026-10-30'
+  between:
+  - P-VOL-FRACTIONAL
+  - regola 8 dell'app (solo muscolo primario)
+  summary:
+    it: Pelland trova che contare le serie indirette come mezze serie prevede meglio i risultati; la regola
+      8 dell'app conta solo il muscolo primario.
+  resolution:
+    it: 'Decisione di Vincenzo: il motore usa subito i pesi (vocab/muscles.yaml, setWeights); la regola
+      8 e il contratto cambieranno in un secondo momento.'
+- id: C-RIR-BY-ROLE
+  status: open
+  date: '2026-10-30'
+  between:
+  - P-RIR-HYP
+  - P-FAILURE-NOT-REQUIRED
+  summary:
+    it: Robinson suggerisce che il cedimento conti di più con carichi leggeri; ACSM dice che non ci sono
+      prove per fissare RIR esatti.
+  resolution:
+    it: 'Nessuna modifica: un RIR diverso per tipo di esercizio resta un''ipotesi da rivalutare.'

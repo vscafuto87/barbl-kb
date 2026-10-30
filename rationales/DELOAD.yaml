@@ -1,0 +1,9 @@
+ruleId: DELOAD
+key: deload.week
+level: mesocycle
+text:
+  it: 'Settimana di scarico: metà delle serie, carico della prima settimana, RIR {rir}.'
+  en: 'Deload week: half the sets, week-one loads, {rir} RIR.'
+exampleValues:
+  rir: 4
+sourcesFrom: parameters/deload

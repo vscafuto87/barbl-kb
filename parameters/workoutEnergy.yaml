@@ -1,0 +1,8 @@
+group: workoutEnergy
+target: parameters
+values:
+  met: 3.5
+  source: Compendium of Physical Activities (Ainsworth et al.), allenamento di forza leggero-moderato
+provisional: true
+principles:
+- P-MET-STRENGTH

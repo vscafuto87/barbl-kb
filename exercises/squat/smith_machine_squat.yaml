@@ -1,0 +1,19 @@
+id: smith_machine_squat
+name:
+  it: Squat al multipower
+  en: Smith machine squat
+equipment: smith_machine
+requires:
+- smith_machine
+pattern: squat
+mechanics: compound
+muscles:
+  primary: quadriceps
+  secondary:
+  - glutes
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- squat
+- leg_press

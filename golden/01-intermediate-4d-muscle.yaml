@@ -1,0 +1,42 @@
+id: golden-01
+name:
+  it: Intermedio, 4 giorni da 60 minuti, massa, palestra completa
+profile: golden/profile-example.json
+expect:
+  split: upper_lower
+  sessions: 4
+  scheduleDays:
+  - mon
+  - wed
+  - thu
+  - sat
+  mesocycle:
+    weeks: 5
+    lastWeekType: deload
+    rirTargetByWeek:
+      3: 2
+  initialLoad:
+    barbell_bench_press:
+      kg: 80
+      source: profile
+    dumbbell_row:
+      kg: 32
+      source: profile
+    military_press:
+      kg: 47.5
+      source: profile
+    squat:
+      kg: null
+      source: trial_set
+  weeklySetsAtLeast:
+    counting: fractional
+    values:
+      back: 10
+      chest: 10
+      quadriceps: 10
+      biceps: 10
+      triceps: 10
+  validAgainst: contract/plan.schema.json
+origin:
+  it: Caso d'oro 01 di docs/contratto/README.md dell'app. «Braccia» è letto come bicipiti e tricipiti,
+    10 serie frazionarie a testa.

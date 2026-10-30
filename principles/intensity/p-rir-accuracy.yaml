@@ -1,0 +1,17 @@
+id: P-RIR-ACCURACY
+topic: intensity
+statement:
+  it: Le persone sottostimano di circa una ripetizione quante ne restano prima del cedimento; la stima
+    è migliore vicino al cedimento e con 12 ripetizioni o meno, e non dipende dall'esperienza.
+  en: People underestimate reps left before failure by about one rep; estimates are better near failure
+    and with 12 reps or fewer, regardless of experience.
+evidence: medium
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/progression
+- parameters/trialLoad
+- prescriptions
+sources:
+- id: halperin-2022-rir-accuracy
+  access: abstract_only

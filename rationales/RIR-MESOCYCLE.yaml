@@ -1,0 +1,12 @@
+ruleId: RIR-MESOCYCLE
+key: mesocycle.rir
+level: mesocycle
+text:
+  it: 'Settimana {week} di {totalWeeks}: RIR target {rir}. Ci si avvicina al cedimento settimana dopo
+    settimana, poi lo scarico.'
+  en: 'Week {week} of {totalWeeks}: target {rir} RIR. You get closer to failure each week, then deload.'
+exampleValues:
+  week: 3
+  totalWeeks: 5
+  rir: 2
+sourcesFrom: parameters/mesocycle

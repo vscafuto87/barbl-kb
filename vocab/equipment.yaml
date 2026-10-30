@@ -1,0 +1,22 @@
+# Vocabolario chiuso dell'attrezzatura (decisione del 30 ottobre 2026: lo fissa la KB e il
+# profilo dell'app lo adotterà come enum in `gym.equipment`, con un cambio di contratto concordato).
+# I primi sette valori sono quelli che l'onboarding dell'app già scrive
+# (`packages/progression/lib/src/profile/profile_choices.dart`).
+profileEquipment:
+  - { id: barbell,       name: { it: Bilanciere,      en: Barbell } }
+  - { id: rack,          name: { it: Rack,            en: Rack } }
+  - { id: bench,         name: { it: Panca,           en: Bench } }
+  - { id: dumbbells,     name: { it: Manubri,         en: Dumbbells } }
+  - { id: machines,      name: { it: Macchine,        en: Machines } }
+  - { id: cables,        name: { it: Cavi,            en: Cables } }
+  - { id: smith_machine, name: { it: Multipower,      en: Smith machine } }
+
+# Attrezzatura proposta per tipo di palestra: copia di `equipmentForGymType` dell'app,
+# usata dal validatore per controllare che ogni slot sia coperto in ogni palestra.
+gymTypes:
+  full:      [barbell, rack, bench, dumbbells, machines, cables, smith_machine]
+  home:      [barbell, rack, bench, dumbbells]
+  dumbbells: [dumbbells, bench]
+
+# Valori di `equipment` dell'esercizio nel piano (enum del contratto).
+planEquipment: [barbell, dumbbell, machine, cable, smith_machine, bodyweight, other]

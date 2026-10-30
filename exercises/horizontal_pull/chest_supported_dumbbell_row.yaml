@@ -1,0 +1,20 @@
+id: chest_supported_dumbbell_row
+name:
+  it: Rematore con manubri su panca inclinata
+  en: Chest-supported dumbbell row
+equipment: dumbbell
+requires:
+- dumbbells
+- bench
+pattern: horizontal_pull
+mechanics: compound
+muscles:
+  primary: back
+  secondary:
+  - biceps
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- dumbbell_row
+- seated_cable_row

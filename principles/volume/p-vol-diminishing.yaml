@@ -1,0 +1,20 @@
+id: P-VOL-DIMINISHING
+topic: volume
+statement:
+  it: I rendimenti del volume calano oltre circa 18-20 serie settimanali per l'ipertrofia e oltre 2-3
+    serie per esercizio per la forza.
+  en: Returns from volume diminish beyond roughly 18-20 weekly sets for hypertrophy and beyond 2-3 sets
+    per exercise for strength.
+evidence: medium
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/belowBand
+- prescriptions
+sources:
+- id: acsm-2026-resistance-training
+  pages:
+  - 865
+  access: full_text
+- id: pelland-2026-volume-frequency
+  access: full_text_preprint

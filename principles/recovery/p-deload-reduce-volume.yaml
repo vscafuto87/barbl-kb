@@ -1,0 +1,15 @@
+id: P-DELOAD-REDUCE-VOLUME
+topic: recovery
+statement:
+  it: Nello scarico si riducono volume e vicinanza al cedimento, mantenendo l'intensità se il volume scende;
+    non c'è una percentuale concordata.
+  en: A deload reduces volume and proximity to failure, keeping intensity if volume drops; there is no
+    agreed percentage.
+evidence: low
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/deload
+sources:
+- id: bell-2023-deload-delphi
+  access: full_text

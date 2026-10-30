@@ -1,0 +1,15 @@
+group: belowBand
+target: parameters
+ruleId: VOL-BAND
+values:
+  bandMin: 10
+  bandMax: 16
+  deficitShare: 0.5
+  maxPerExercise: 2
+  maxPerSession: 4
+provisional: true
+principles:
+- P-VOL-MIN-10
+- P-VOL-DIMINISHING
+- P-VOL-BAND-CAP
+- P-VOL-DEFICIT-SHARE

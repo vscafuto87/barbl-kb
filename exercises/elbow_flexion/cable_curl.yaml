@@ -1,0 +1,18 @@
+id: cable_curl
+name:
+  it: Curl ai cavi
+  en: Cable curl
+equipment: cable
+requires:
+- cables
+pattern: elbow_flexion
+mechanics: isolation
+muscles:
+  primary: biceps
+  secondary: []
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- dumbbell_curl
+- barbell_curl

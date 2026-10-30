@@ -1,0 +1,11 @@
+ruleId: PROG-DOUBLE
+key: progression.double
+level: set
+text:
+  it: Se tutte le serie arrivano alle ripetizioni massime con RIR almeno pari al target, la volta dopo
+    il carico sale di {stepKg} kg.
+  en: If every set reaches the top of the rep range at or above the target RIR, next time the load goes
+    up by {stepKg} kg.
+exampleValues:
+  stepKg: 2.5
+sourcesFrom: parameters/progression

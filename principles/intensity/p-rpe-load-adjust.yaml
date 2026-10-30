@@ -1,0 +1,14 @@
+id: P-RPE-LOAD-ADJUST
+topic: intensity
+statement:
+  it: Ogni punto di sforzo percepito in più rispetto al previsto corrisponde a circa il 4% di carico in
+    meno.
+  en: Each point of perceived exertion above plan corresponds to roughly 4% less load.
+evidence: low
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/tired
+sources:
+- id: helms-2018-rpe-vs-percentage
+  access: full_text

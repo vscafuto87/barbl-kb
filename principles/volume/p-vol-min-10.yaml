@@ -1,0 +1,19 @@
+id: P-VOL-MIN-10
+topic: volume
+statement:
+  it: Per l'ipertrofia servono almeno 10 serie a settimana per gruppo muscolare, con un rapporto dose-risposta.
+  en: Hypertrophy needs at least 10 sets per muscle group per week, with a dose-response relationship.
+evidence: high
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/belowBand
+sources:
+- id: acsm-2026-resistance-training
+  pages:
+  - 851
+  - 856
+  - 860
+  access: full_text
+- id: pelland-2026-volume-frequency
+  access: full_text_preprint

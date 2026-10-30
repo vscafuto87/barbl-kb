@@ -1,0 +1,16 @@
+id: P-RIR-CORRECTION
+topic: progression
+statement:
+  it: 'Se una serie chiude più vicino al cedimento del previsto, la successiva scende di un passo: è un''autoregolazione
+    basata sul RIR.'
+  en: 'If a set ends closer to failure than planned, the next one drops one step: RIR-based autoregulation.'
+evidence: low
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/progression
+sources:
+- id: helms-2020-regulating-training
+  access: full_text
+- id: helms-2018-rpe-vs-percentage
+  access: full_text

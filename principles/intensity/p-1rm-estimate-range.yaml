@@ -1,0 +1,22 @@
+id: P-1RM-ESTIMATE-RANGE
+topic: intensity
+statement:
+  it: La stima del massimale da una serie vicina al cedimento è più precisa con carichi da circa 5 ripetizioni
+    massime e peggiora oltre le 10.
+  en: Estimating 1RM from a near-failure set is most accurate around 5RM loads and degrades beyond 10
+    reps.
+evidence: medium
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/trialLoad
+sources:
+- id: helms-pyramid-training-v2
+  pages:
+  - 120
+  access: full_text
+- id: reynolds-2006-1rm-prediction
+  access: full_text
+conflicts:
+- with: conflicts.yaml#C-TRIAL-1RM
+  status: resolved

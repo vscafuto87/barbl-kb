@@ -1,0 +1,18 @@
+id: dumbbell_curl
+name:
+  it: Curl con manubri
+  en: Dumbbell curl
+equipment: dumbbell
+requires:
+- dumbbells
+pattern: elbow_flexion
+mechanics: isolation
+muscles:
+  primary: biceps
+  secondary: []
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- cable_curl
+- barbell_curl

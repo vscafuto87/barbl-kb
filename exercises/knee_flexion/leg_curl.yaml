@@ -1,0 +1,18 @@
+id: leg_curl
+name:
+  it: Leg curl
+  en: Leg curl
+equipment: machine
+requires:
+- machines
+pattern: knee_flexion
+mechanics: isolation
+muscles:
+  primary: hamstrings
+  secondary: []
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- dumbbell_romanian_deadlift
+- romanian_deadlift

@@ -1,0 +1,18 @@
+id: P-PATTERNS
+topic: structure
+statement:
+  it: Per coprire i grandi gruppi muscolari bastano spinta e trazione per parte alta e bassa, più orizzontale
+    e verticale per la parte alta.
+  en: Push and pull for upper and lower body, plus horizontal and vertical for the upper body, cover the
+    major muscle groups.
+evidence: low
+status: provisional
+reviewedBy: null
+feeds:
+- templates
+- vocab/patterns
+sources:
+- id: acsm-2026-resistance-training
+  pages:
+  - 866
+  access: full_text

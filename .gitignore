@@ -1,0 +1,6 @@
+# I PDF, i Markdown estratti e i dati strutturati dei programmi non entrano mai qui.
+*.pdf
+md/
+structured/
+__pycache__/
+.DS_Store

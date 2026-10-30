@@ -1,0 +1,21 @@
+id: squat
+name:
+  it: Squat
+  en: Squat
+equipment: barbell
+requires:
+- barbell
+- rack
+pattern: squat
+mechanics: compound
+muscles:
+  primary: quadriceps
+  secondary:
+  - glutes
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: trial_set
+substitutes:
+- leg_press
+- goblet_squat
+- smith_machine_squat

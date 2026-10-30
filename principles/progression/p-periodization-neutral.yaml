@@ -1,0 +1,17 @@
+id: P-PERIODIZATION-NEUTRAL
+topic: progression
+statement:
+  it: 'Con un sovraccarico progressivo, la periodizzazione non è superiore a un programma non periodizzato:
+    il mesociclo è una scelta di organizzazione.'
+  en: 'With progressive overload, periodization is not superior to non-periodized training: the mesocycle
+    is an organizational choice.'
+evidence: medium
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/mesocycle
+sources:
+- id: acsm-2026-resistance-training
+  pages:
+  - 863
+  access: full_text

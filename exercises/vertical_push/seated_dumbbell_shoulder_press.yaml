@@ -1,0 +1,20 @@
+id: seated_dumbbell_shoulder_press
+name:
+  it: Lento avanti con manubri da seduto
+  en: Seated dumbbell shoulder press
+equipment: dumbbell
+requires:
+- dumbbells
+- bench
+pattern: vertical_push
+mechanics: compound
+muscles:
+  primary: shoulders
+  secondary:
+  - triceps
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- military_press
+- machine_shoulder_press

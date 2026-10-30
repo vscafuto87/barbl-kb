@@ -1,0 +1,17 @@
+id: standing_calf_raise
+name:
+  it: Calf raise in piedi alla macchina
+  en: Standing machine calf raise
+equipment: machine
+requires:
+- machines
+pattern: calf_raise
+mechanics: isolation
+muscles:
+  primary: calves
+  secondary: []
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- dumbbell_calf_raise

@@ -1,0 +1,13 @@
+id: P-MET-STRENGTH
+topic: energy
+statement:
+  it: Un allenamento di forza leggero-moderato vale circa 3,5 MET; le calorie sono una stima grossolana.
+  en: Light-to-moderate strength training is about 3.5 METs; calories are a rough estimate.
+evidence: low
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/workoutEnergy
+sources:
+- id: ainsworth-compendium
+  access: abstract_only

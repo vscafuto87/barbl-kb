@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://barbl/kb/rationale.schema.json",
+  "title": "Motivazione",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ruleId",
+    "key",
+    "level",
+    "text"
+  ],
+  "properties": {
+    "ruleId": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "level": {
+      "enum": [
+        "set",
+        "session",
+        "mesocycle"
+      ]
+    },
+    "text": {
+      "type": "object",
+      "required": [
+        "it",
+        "en"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "it": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "exampleValues": {
+      "type": "object"
+    },
+    "sourcesFrom": {
+      "type": "string",
+      "pattern": "^parameters/[A-Za-z]+$"
+    },
+    "principles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "required": [
+        "sourcesFrom"
+      ]
+    },
+    {
+      "required": [
+        "principles"
+      ]
+    }
+  ]
+}

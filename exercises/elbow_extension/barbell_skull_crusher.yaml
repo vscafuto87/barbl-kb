@@ -1,0 +1,18 @@
+id: barbell_skull_crusher
+name:
+  it: French press con bilanciere
+  en: Barbell skull crusher
+equipment: barbell
+requires:
+- barbell
+- bench
+pattern: elbow_extension
+mechanics: isolation
+muscles:
+  primary: triceps
+  secondary: []
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- dumbbell_overhead_triceps_extension

@@ -1,0 +1,15 @@
+id: P-RIR-HYP
+topic: intensity
+statement:
+  it: L'ipertrofia cresce chiudendo le serie più vicino al cedimento; l'effetto è minore con carichi pesanti.
+    Negli studi il RIR è stimato.
+  en: Hypertrophy grows as sets end closer to failure; the effect is smaller with heavy loads. RIR was
+    estimated in the studies.
+evidence: medium
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/mesocycle
+sources:
+- id: robinson-2024-proximity-failure
+  access: full_text_preprint

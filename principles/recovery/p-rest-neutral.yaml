@@ -1,0 +1,16 @@
+id: P-REST-NEUTRAL
+topic: recovery
+statement:
+  it: Per la forza, recuperi sotto o sopra un minuto danno risultati simili; per l'ipertrofia i dati non
+    bastano.
+  en: For strength, rests under or over one minute give similar results; data are insufficient for hypertrophy.
+evidence: medium
+status: provisional
+reviewedBy: null
+feeds:
+- prescriptions
+sources:
+- id: acsm-2026-resistance-training
+  pages:
+  - 855
+  access: full_text

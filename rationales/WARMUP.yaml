@@ -1,0 +1,9 @@
+ruleId: WARMUP
+key: warmup.auto
+level: session
+text:
+  it: 'Riscaldamento: {scheme}.'
+  en: 'Warm-up: {scheme}.'
+exampleValues:
+  scheme: 40 × 8, 57,5 × 5, 70 × 2
+sourcesFrom: parameters/warmup

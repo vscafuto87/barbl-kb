@@ -1,0 +1,14 @@
+group: progression
+target: parameters
+ruleId: PROG-DOUBLE
+values:
+  stepKg: 2.5
+  rirBelowThreshold: 1
+  correctionSteps: 1
+  rirScaleTop: 3
+  historyDepth: 10
+provisional: true
+principles:
+- P-DOUBLE-PROGRESSION
+- P-RIR-CORRECTION
+- P-RIR-ACCURACY

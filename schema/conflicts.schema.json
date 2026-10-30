@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://barbl/kb/conflicts.schema.json",
+  "title": "Registro dei conflitti",
+  "type": "object",
+  "required": [
+    "conflicts"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "date",
+          "between",
+          "summary",
+          "resolution"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^C-[A-Z0-9-]+$"
+          },
+          "status": {
+            "enum": [
+              "open",
+              "resolved",
+              "deferred"
+            ]
+          },
+          "date": {
+            "type": "string"
+          },
+          "between": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "summary": {
+            "type": "object",
+            "required": [
+              "it"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "it": {
+                "type": "string",
+                "minLength": 1
+              },
+              "en": {
+                "type": "string"
+              }
+            }
+          },
+          "resolution": {
+            "type": "object",
+            "required": [
+              "it"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "it": {
+                "type": "string",
+                "minLength": 1
+              },
+              "en": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

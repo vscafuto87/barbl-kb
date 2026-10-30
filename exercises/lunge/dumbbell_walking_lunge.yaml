@@ -1,0 +1,18 @@
+id: dumbbell_walking_lunge
+name:
+  it: Affondi in camminata con manubri
+  en: Dumbbell walking lunge
+equipment: dumbbell
+requires:
+- dumbbells
+pattern: lunge
+mechanics: compound
+muscles:
+  primary: quadriceps
+  secondary:
+  - glutes
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- bulgarian_split_squat

@@ -1,0 +1,18 @@
+id: dumbbell_overhead_triceps_extension
+name:
+  it: Estensioni sopra la testa con manubrio
+  en: Dumbbell overhead triceps extension
+equipment: dumbbell
+requires:
+- dumbbells
+pattern: elbow_extension
+mechanics: isolation
+muscles:
+  primary: triceps
+  secondary: []
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- overhead_cable_triceps_extension
+- barbell_skull_crusher

@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://barbl/kb/template.schema.json",
+  "title": "Template di split",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "split",
+    "daysPerWeek",
+    "goals",
+    "defaultSchedule",
+    "sessions",
+    "principles"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+    },
+    "split": {
+      "type": "string"
+    },
+    "daysPerWeek": {
+      "type": "integer"
+    },
+    "goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "defaultSchedule": {
+      "type": "object",
+      "propertyNames": {
+        "enum": [
+          "mon",
+          "tue",
+          "wed",
+          "thu",
+          "fri",
+          "sat",
+          "sun"
+        ]
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "sessions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "focus",
+          "blocks"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "name": {
+            "type": "object",
+            "required": [
+              "it",
+              "en"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "it": {
+                "type": "string",
+                "minLength": 1
+              },
+              "en": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "focus": {
+            "enum": [
+              "upper_body",
+              "legs",
+              "full_body"
+            ]
+          },
+          "blocks": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "type",
+                "slots"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "enum": [
+                    "single",
+                    "superset"
+                  ]
+                },
+                "label": {
+                  "type": "string"
+                },
+                "slots": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "pattern",
+                      "role",
+                      "candidates"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "pattern": {
+                        "type": "string"
+                      },
+                      "role": {
+                        "enum": [
+                          "main",
+                          "secondary",
+                          "accessory"
+                        ]
+                      },
+                      "candidates": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "repsOverride": {
+                        "type": "object",
+                        "required": [
+                          "min",
+                          "max"
+                        ],
+                        "additionalProperties": false,
+                        "properties": {
+                          "min": {
+                            "type": "integer",
+                            "minimum": 1
+                          },
+                          "max": {
+                            "type": "integer",
+                            "minimum": 1
+                          }
+                        }
+                      },
+                      "overrideReason": {
+                        "type": "object",
+                        "required": [
+                          "it"
+                        ],
+                        "properties": {
+                          "it": {
+                            "type": "string"
+                          },
+                          "en": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "dependentRequired": {
+                      "repsOverride": [
+                        "overrideReason"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "principles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "structureSources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "object",
+      "required": [
+        "it"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "it": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

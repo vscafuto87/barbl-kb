@@ -1,0 +1,13 @@
+group: tired
+target: parameters
+ruleId: START-TIRED
+values:
+  loadPct: -5
+  fewerSets: 1
+  onMainExercises: 2
+  countsForProgression: false
+  minSets: 2
+provisional: true
+principles:
+- P-RPE-LOAD-ADJUST
+- P-SETS-MIN-2

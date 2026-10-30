@@ -1,0 +1,15 @@
+id: P-WARMUP-HEAVY
+topic: warmup
+statement:
+  it: Una serie di riscaldamento pesante prepara meglio di una leggera; una leggera più una pesante dà
+    un piccolo vantaggio in più.
+  en: A heavy warm-up set prepares better than a light one; a light plus a heavy one gives a small extra
+    benefit.
+evidence: medium
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/warmup
+sources:
+- id: sbs-heavier-warmups
+  access: full_text

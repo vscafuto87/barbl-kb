@@ -1,0 +1,16 @@
+id: P-VOL-DOSE-HYP
+topic: volume
+statement:
+  it: Più serie a settimana danno più ipertrofia senza un tetto chiaro; la dose minima efficace è circa
+    4 serie frazionarie a settimana e oltre 25 circa i dati sono pochi.
+  en: More weekly sets give more hypertrophy with no clear ceiling; the minimum effective dose is about
+    4 fractional sets per week and data are sparse beyond about 25.
+evidence: high
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/belowBand
+- prescriptions
+sources:
+- id: pelland-2026-volume-frequency
+  access: full_text_preprint
