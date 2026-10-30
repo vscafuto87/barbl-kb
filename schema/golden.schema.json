@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://barbl/kb/golden.schema.json",
+  "title": "Caso d'oro",
+  "type": "object",
+  "required": [
+    "id",
+    "profile",
+    "expect"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "object",
+      "required": [
+        "it"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "it": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string"
+        }
+      }
+    },
+    "profile": {
+      "type": "string"
+    },
+    "expect": {
+      "type": "object"
+    },
+    "origin": {
+      "type": "object",
+      "required": [
+        "it"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "it": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

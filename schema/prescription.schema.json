@@ -1,0 +1,254 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://barbl/kb/prescription.schema.json",
+  "title": "Prescrizioni per obiettivo",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "appliesTo",
+    "roles",
+    "supersetRestSeconds",
+    "timeBudget",
+    "provisional",
+    "principles"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+    },
+    "appliesTo": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "muscle_gain",
+          "strength",
+          "both"
+        ]
+      }
+    },
+    "roles": {
+      "type": "object",
+      "required": [
+        "main",
+        "secondary",
+        "accessory"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "main": {
+          "type": "object",
+          "required": [
+            "sets",
+            "reps",
+            "restSeconds",
+            "rirFollowsMesocycle",
+            "warmup"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "sets": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "reps": {
+              "type": "object",
+              "required": [
+                "min",
+                "max"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "min": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "max": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "restSeconds": {
+              "type": "object",
+              "required": [
+                "upper",
+                "lower"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "upper": {
+                  "type": "integer"
+                },
+                "lower": {
+                  "type": "integer"
+                }
+              }
+            },
+            "rirFollowsMesocycle": {
+              "type": "boolean"
+            },
+            "warmup": {
+              "type": "boolean"
+            }
+          }
+        },
+        "secondary": {
+          "type": "object",
+          "required": [
+            "sets",
+            "reps",
+            "restSeconds",
+            "rirFollowsMesocycle",
+            "warmup"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "sets": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "reps": {
+              "type": "object",
+              "required": [
+                "min",
+                "max"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "min": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "max": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "restSeconds": {
+              "type": "object",
+              "required": [
+                "upper",
+                "lower"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "upper": {
+                  "type": "integer"
+                },
+                "lower": {
+                  "type": "integer"
+                }
+              }
+            },
+            "rirFollowsMesocycle": {
+              "type": "boolean"
+            },
+            "warmup": {
+              "type": "boolean"
+            }
+          }
+        },
+        "accessory": {
+          "type": "object",
+          "required": [
+            "sets",
+            "reps",
+            "restSeconds",
+            "rirFollowsMesocycle",
+            "warmup"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "sets": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "reps": {
+              "type": "object",
+              "required": [
+                "min",
+                "max"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "min": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "max": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "restSeconds": {
+              "type": "object",
+              "required": [
+                "upper",
+                "lower"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "upper": {
+                  "type": "integer"
+                },
+                "lower": {
+                  "type": "integer"
+                }
+              }
+            },
+            "rirFollowsMesocycle": {
+              "type": "boolean"
+            },
+            "warmup": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "supersetRestSeconds": {
+      "type": "integer"
+    },
+    "timeBudget": {
+      "type": "object",
+      "required": [
+        "minutesPerSet"
+      ],
+      "properties": {
+        "minutesPerSet": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "provisional": {
+      "type": "boolean"
+    },
+    "principles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "object",
+      "required": [
+        "it"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "it": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

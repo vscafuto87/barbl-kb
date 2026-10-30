@@ -1,0 +1,770 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "barbl/plan.schema.json",
+  "title": "Piano di allenamento",
+  "description": "Output del motore: un mesociclo completo.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "generatedBy",
+    "goal",
+    "split",
+    "mesocycle",
+    "schedule",
+    "sessions",
+    "rationales",
+    "parameters"
+  ],
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "reference"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string",
+          "description": "Capitolo o pagina"
+        },
+        "url": {
+          "type": "string"
+        },
+        "evidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exerciseId",
+        "name",
+        "equipment",
+        "sets",
+        "reps",
+        "rirFollowsMesocycle",
+        "initialLoad"
+      ],
+      "properties": {
+        "exerciseId": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "equipment": {
+          "enum": [
+            "barbell",
+            "dumbbell",
+            "machine",
+            "cable",
+            "smith_machine",
+            "bodyweight",
+            "other"
+          ],
+          "description": "Attrezzo con cui si esegue l'esercizio. barbell = bilanciere con dischi caricati a mano (l'app mostra i dischi per lato)"
+        },
+        "muscles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sets": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "reps": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "min",
+            "max"
+          ],
+          "properties": {
+            "min": {
+              "type": "integer"
+            },
+            "max": {
+              "type": "integer"
+            }
+          }
+        },
+        "rirFollowsMesocycle": {
+          "type": "boolean",
+          "description": "true = il RIR target è quello della settimana del mesociclo"
+        },
+        "restSeconds": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "null negli esercizi di un superset: vale il recupero del blocco"
+        },
+        "warmup": {
+          "type": "boolean"
+        },
+        "initialLoad": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kg",
+            "source"
+          ],
+          "properties": {
+            "kg": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "source": {
+              "enum": [
+                "profile",
+                "estimate",
+                "trial_set",
+                "to_be_defined"
+              ]
+            }
+          }
+        },
+        "stepKg": {
+          "type": "number",
+          "default": 2.5
+        },
+        "rules": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Identificativi delle regole che governano l'esercizio"
+        },
+        "toBeDefined": {
+          "type": "boolean",
+          "description": "true = segnaposto: il contenuto arriverà dal motore vero"
+        }
+      }
+    },
+    "block": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "exercises"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "single",
+            "superset"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "description": "Per i superset, es. A"
+        },
+        "restSeconds": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Superset: recupero dopo ogni giro"
+        },
+        "exercises": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/exercise"
+          }
+        }
+      }
+    },
+    "parameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Numeri di tutte le regole. L'app implementa i meccanismi e legge i valori solo da qui.",
+      "required": [
+        "progression",
+        "deload",
+        "belowBand",
+        "tired",
+        "feedback",
+        "warmup",
+        "move",
+        "trialLoad"
+      ],
+      "properties": {
+        "progression": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "stepKg",
+            "rirBelowThreshold",
+            "correctionSteps",
+            "rirScaleTop",
+            "historyDepth",
+            "provisional",
+            "ruleId"
+          ],
+          "description": "Doppia progressione e correzione in seduta",
+          "properties": {
+            "stepKg": {
+              "type": "number"
+            },
+            "rirBelowThreshold": {
+              "type": "integer"
+            },
+            "correctionSteps": {
+              "type": "integer"
+            },
+            "rirScaleTop": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Ultimo valore della scala del RIR con cui si registra una serie; si legge \"N o più\" (3 = 0, 1, 2, 3+)"
+            },
+            "historyDepth": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "Quante sedute passate di un esercizio l'app legge per proporre la successiva (doppia progressione, fastidi consecutivi, \"Prima\"); deve coprire ogni regola che guarda indietro, almeno feedback.discomfortAlwaysAfter"
+            },
+            "provisional": {
+              "type": "boolean",
+              "description": "true = valore provvisorio, da confermare con la knowledge base"
+            },
+            "ruleId": {
+              "type": "string"
+            }
+          }
+        },
+        "deload": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "setsFactor",
+            "rirTarget",
+            "loadFromWeek",
+            "minSetsPerExercise",
+            "provisional",
+            "ruleId"
+          ],
+          "description": "Settimana di scarico",
+          "properties": {
+            "setsFactor": {
+              "type": "number"
+            },
+            "rirTarget": {
+              "type": "integer"
+            },
+            "loadFromWeek": {
+              "type": "integer"
+            },
+            "minSetsPerExercise": {
+              "type": "integer",
+              "description": "Minimo di serie per esercizio in scarico"
+            },
+            "provisional": {
+              "type": "boolean",
+              "description": "true = valore provvisorio, da confermare con la knowledge base"
+            },
+            "ruleId": {
+              "type": "string"
+            }
+          }
+        },
+        "belowBand": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "bandMin",
+            "bandMax",
+            "deficitShare",
+            "maxPerExercise",
+            "maxPerSession",
+            "provisional",
+            "ruleId"
+          ],
+          "description": "Serie aggiunte quando un muscolo è sotto fascia",
+          "properties": {
+            "bandMin": {
+              "type": "integer"
+            },
+            "bandMax": {
+              "type": "integer"
+            },
+            "deficitShare": {
+              "type": "number"
+            },
+            "maxPerExercise": {
+              "type": "integer"
+            },
+            "maxPerSession": {
+              "type": "integer"
+            },
+            "provisional": {
+              "type": "boolean",
+              "description": "true = valore provvisorio, da confermare con la knowledge base"
+            },
+            "ruleId": {
+              "type": "string"
+            }
+          }
+        },
+        "tired": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "loadPct",
+            "fewerSets",
+            "onMainExercises",
+            "countsForProgression",
+            "minSets",
+            "provisional",
+            "ruleId"
+          ],
+          "description": "Condizione Stanco all'avvio",
+          "properties": {
+            "loadPct": {
+              "type": "number"
+            },
+            "fewerSets": {
+              "type": "integer"
+            },
+            "onMainExercises": {
+              "type": "integer"
+            },
+            "countsForProgression": {
+              "type": "boolean"
+            },
+            "minSets": {
+              "type": "integer",
+              "description": "Minimo di serie per esercizio con Stanco"
+            },
+            "provisional": {
+              "type": "boolean",
+              "description": "true = valore provvisorio, da confermare con la knowledge base"
+            },
+            "ruleId": {
+              "type": "string"
+            }
+          }
+        },
+        "feedback": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "easy",
+            "atLimit",
+            "discomfort",
+            "discomfortAlwaysAfter",
+            "provisional",
+            "ruleId"
+          ],
+          "description": "Feedback facoltativo a fine esercizio",
+          "properties": {
+            "easy": {
+              "enum": [
+                "plus_one_step",
+                "no_effect"
+              ]
+            },
+            "atLimit": {
+              "enum": [
+                "no_increase",
+                "no_effect"
+              ]
+            },
+            "discomfort": {
+              "enum": [
+                "suggest_swap",
+                "no_effect"
+              ]
+            },
+            "discomfortAlwaysAfter": {
+              "type": "integer"
+            },
+            "provisional": {
+              "type": "boolean",
+              "description": "true = valore provvisorio, da confermare con la knowledge base"
+            },
+            "ruleId": {
+              "type": "string"
+            }
+          }
+        },
+        "warmup": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "minLoadKg",
+            "scheme",
+            "thirdSetFromKg",
+            "thirdSet",
+            "provisional",
+            "ruleId"
+          ],
+          "description": "Serie di riscaldamento automatiche: [percentuale del carico di lavoro, ripetizioni]",
+          "properties": {
+            "minLoadKg": {
+              "type": "number"
+            },
+            "scheme": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "integer"
+                  }
+                ],
+                "minItems": 2,
+                "maxItems": 2
+              }
+            },
+            "thirdSetFromKg": {
+              "type": "number"
+            },
+            "thirdSet": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "provisional": {
+              "type": "boolean",
+              "description": "true = valore provvisorio, da confermare con la knowledge base"
+            },
+            "ruleId": {
+              "type": "string"
+            }
+          }
+        },
+        "move": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "minRestHours",
+            "shiftsWeek",
+            "provisional",
+            "ruleId"
+          ],
+          "description": "Regole di Sposta seduta",
+          "properties": {
+            "minRestHours": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "lower",
+                "upper"
+              ],
+              "properties": {
+                "lower": {
+                  "type": "integer"
+                },
+                "upper": {
+                  "type": "integer"
+                }
+              }
+            },
+            "shiftsWeek": {
+              "type": "boolean"
+            },
+            "provisional": {
+              "type": "boolean",
+              "description": "true = valore provvisorio, da confermare con la knowledge base"
+            },
+            "ruleId": {
+              "type": "string"
+            }
+          }
+        },
+        "trialLoad": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "incrementKg",
+            "approachReps",
+            "rirStop",
+            "rirRepeat",
+            "repeatIncrementPct",
+            "provisional",
+            "ruleId"
+          ],
+          "description": "Serie di prova quando l'utente non conosce il carico",
+          "properties": {
+            "incrementKg": {
+              "type": "number"
+            },
+            "approachReps": {
+              "type": "integer"
+            },
+            "rirStop": {
+              "type": "integer"
+            },
+            "rirRepeat": {
+              "type": "integer"
+            },
+            "repeatIncrementPct": {
+              "type": "number"
+            },
+            "provisional": {
+              "type": "boolean",
+              "description": "true = valore provvisorio, da confermare con la knowledge base"
+            },
+            "ruleId": {
+              "type": "string"
+            }
+          }
+        },
+        "workoutEnergy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "met",
+            "provisional",
+            "source"
+          ],
+          "description": "Stima delle calorie di una seduta (MET x kg x ore). Facoltativo: senza il blocco l'app non mostra le calorie",
+          "properties": {
+            "met": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "provisional": {
+              "type": "boolean",
+              "description": "true = valore provvisorio, da confermare con la knowledge base"
+            },
+            "source": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "schemaVersion": {
+      "const": "2.0"
+    },
+    "id": {
+      "type": "string"
+    },
+    "generatedBy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "engine",
+        "rulesVersion"
+      ],
+      "properties": {
+        "engine": {
+          "type": "string"
+        },
+        "rulesVersion": {
+          "type": "string"
+        }
+      }
+    },
+    "goal": {
+      "enum": [
+        "muscle_gain",
+        "strength",
+        "both"
+      ]
+    },
+    "split": {
+      "enum": [
+        "upper_lower",
+        "full_body",
+        "push_pull_legs"
+      ]
+    },
+    "mesocycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "weeks"
+      ],
+      "properties": {
+        "weeks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "number",
+              "type",
+              "rirTarget"
+            ],
+            "properties": {
+              "number": {
+                "type": "integer"
+              },
+              "type": {
+                "enum": [
+                  "load",
+                  "deload"
+                ]
+              },
+              "rirTarget": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "note": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "schedule": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "day",
+          "sessionId"
+        ],
+        "properties": {
+          "day": {
+            "enum": [
+              "mon",
+              "tue",
+              "wed",
+              "thu",
+              "fri",
+              "sat",
+              "sun"
+            ]
+          },
+          "sessionId": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sessions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "estimatedDurationMin",
+          "blocks"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "focus": {
+            "enum": [
+              "upper_body",
+              "legs",
+              "full_body"
+            ]
+          },
+          "estimatedDurationMin": {
+            "type": "integer"
+          },
+          "blocks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/block"
+            }
+          }
+        }
+      }
+    },
+    "rationales": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "ruleId",
+          "key",
+          "text",
+          "sources"
+        ],
+        "properties": {
+          "ruleId": {
+            "type": "string"
+          },
+          "key": {
+            "type": "string",
+            "description": "Chiave stabile del messaggio, es. correction.setBelow"
+          },
+          "level": {
+            "enum": [
+              "set",
+              "session",
+              "mesocycle"
+            ],
+            "default": "set",
+            "description": "Livello a cui il motore assegna la motivazione: serie, seduta o mesociclo. Facoltativo; se manca vale set"
+          },
+          "values": {
+            "type": "object",
+            "description": "Numeri inseriti nel testo; l'app li formatta secondo la lingua"
+          },
+          "text": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "it",
+              "en"
+            ],
+            "properties": {
+              "it": {
+                "type": "string"
+              },
+              "en": {
+                "type": "string"
+              }
+            }
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/source"
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "$ref": "#/$defs/parameters"
+    }
+  }
+}

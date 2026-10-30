@@ -1,0 +1,18 @@
+id: dumbbell_fly
+name:
+  it: Croci con manubri
+  en: Dumbbell fly
+equipment: dumbbell
+requires:
+- dumbbells
+- bench
+pattern: chest_isolation
+mechanics: isolation
+muscles:
+  primary: chest
+  secondary: []
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- cable_fly

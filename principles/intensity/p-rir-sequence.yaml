@@ -1,0 +1,17 @@
+id: P-RIR-SEQUENCE
+topic: intensity
+statement:
+  it: 'Nel mesociclo il RIR target scende settimana dopo settimana (3, 3, 2, 1) e risale nello scarico
+    (4): partire da 3 lascia margine all''errore di stima delle prime sedute.'
+  en: 'Across the mesocycle the target RIR drops week by week (3, 3, 2, 1) and rises in the deload (4):
+    starting at 3 leaves room for estimation error in the first sessions.'
+evidence: design
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/mesocycle
+sources:
+- id: barbl-design
+  access: full_text
+- id: halperin-2022-rir-accuracy
+  access: abstract_only

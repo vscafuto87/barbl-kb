@@ -1,0 +1,9 @@
+ruleId: START-TIRED
+key: start.tired
+level: session
+text:
+  it: 'Oggi sei stanco: carico −{pct}% e una serie in meno sui due esercizi principali.'
+  en: 'Feeling tired today: load −{pct}% and one set fewer on the two main lifts.'
+exampleValues:
+  pct: 5
+sourcesFrom: parameters/tired

@@ -1,0 +1,26 @@
+group: mesocycle
+target: mesocycle
+values:
+  weeks:
+  - number: 1
+    type: load
+    rirTarget: 3
+  - number: 2
+    type: load
+    rirTarget: 3
+  - number: 3
+    type: load
+    rirTarget: 2
+  - number: 4
+    type: load
+    rirTarget: 1
+  - number: 5
+    type: deload
+    rirTarget: 4
+provisional: true
+principles:
+- P-RIR-SEQUENCE
+- P-RIR-HYP
+- P-FAILURE-NOT-REQUIRED
+- P-PERIODIZATION-NEUTRAL
+ruleId: RIR-MESOCYCLE

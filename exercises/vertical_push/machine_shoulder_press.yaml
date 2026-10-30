@@ -1,0 +1,19 @@
+id: machine_shoulder_press
+name:
+  it: Shoulder press alla macchina
+  en: Machine shoulder press
+equipment: machine
+requires:
+- machines
+pattern: vertical_push
+mechanics: compound
+muscles:
+  primary: shoulders
+  secondary:
+  - triceps
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- seated_dumbbell_shoulder_press
+- military_press

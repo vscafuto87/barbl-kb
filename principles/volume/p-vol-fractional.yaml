@@ -1,0 +1,18 @@
+id: P-VOL-FRACTIONAL
+topic: volume
+statement:
+  it: Contare le serie indirette come mezza serie prevede i risultati meglio che contarle intere o ignorarle;
+    il valore 0,5 è un'assunzione.
+  en: Counting indirect sets as half a set predicts outcomes better than counting them fully or ignoring
+    them; the 0.5 value is an assumption.
+evidence: medium
+status: provisional
+reviewedBy: null
+feeds:
+- vocab/muscles
+sources:
+- id: pelland-2026-volume-frequency
+  access: full_text_preprint
+conflicts:
+- with: conflicts.yaml#C-RULE8-FRACTIONAL
+  status: deferred

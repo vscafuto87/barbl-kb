@@ -1,0 +1,18 @@
+id: lat_pulldown
+name:
+  it: Lat machine
+  en: Lat pulldown
+equipment: cable
+requires:
+- cables
+pattern: vertical_pull
+mechanics: compound
+muscles:
+  primary: back
+  secondary:
+  - biceps
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- seated_cable_row

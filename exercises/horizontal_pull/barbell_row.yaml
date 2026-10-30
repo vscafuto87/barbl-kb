@@ -1,0 +1,19 @@
+id: barbell_row
+name:
+  it: Rematore con bilanciere
+  en: Barbell row
+equipment: barbell
+requires:
+- barbell
+pattern: horizontal_pull
+mechanics: compound
+muscles:
+  primary: back
+  secondary:
+  - biceps
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- dumbbell_row
+- seated_cable_row

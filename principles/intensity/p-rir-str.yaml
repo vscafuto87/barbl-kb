@@ -1,0 +1,17 @@
+id: P-RIR-STR
+topic: intensity
+statement:
+  it: La forza cresce in modo simile in un ampio intervallo di RIR; conta di più il carico.
+  en: Strength grows similarly across a wide RIR range; load matters more.
+evidence: medium
+status: provisional
+reviewedBy: null
+feeds:
+- prescriptions
+sources:
+- id: robinson-2024-proximity-failure
+  access: full_text_preprint
+- id: acsm-2026-resistance-training
+  pages:
+  - 855
+  access: full_text

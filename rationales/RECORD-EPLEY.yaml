@@ -1,0 +1,8 @@
+ruleId: RECORD-EPLEY
+key: record.e1rm
+level: set
+text:
+  it: 'Il massimale stimato usa la formula di Epley: kg × (1 + ripetizioni / 30).'
+  en: 'Estimated 1RM uses the Epley formula: kg × (1 + reps / 30).'
+principles:
+- P-EPLEY

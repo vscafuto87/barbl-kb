@@ -1,0 +1,20 @@
+id: machine_chest_press
+name:
+  it: Chest press
+  en: Machine chest press
+equipment: machine
+requires:
+- machines
+pattern: horizontal_push
+mechanics: compound
+muscles:
+  primary: chest
+  secondary:
+  - triceps
+  - front_delts
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- dumbbell_bench_press
+- barbell_bench_press

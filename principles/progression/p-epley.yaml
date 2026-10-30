@@ -1,0 +1,14 @@
+id: P-EPLEY
+topic: progression
+statement:
+  it: 'Il massimale stimato si calcola con la formula di Epley: kg × (1 + ripetizioni / 30).'
+  en: 'Estimated 1RM uses the Epley formula: kg × (1 + reps / 30).'
+evidence: medium
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/trialLoad
+- rationales
+sources:
+- id: epley-1985
+  access: full_text

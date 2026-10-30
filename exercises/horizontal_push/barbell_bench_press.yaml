@@ -1,0 +1,23 @@
+id: barbell_bench_press
+name:
+  it: Panca piana con bilanciere
+  en: Barbell bench press
+equipment: barbell
+requires:
+- barbell
+- bench
+- rack
+pattern: horizontal_push
+mechanics: compound
+muscles:
+  primary: chest
+  secondary:
+  - triceps
+  - front_delts
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: trial_set
+substitutes:
+- dumbbell_bench_press
+- machine_chest_press
+- smith_machine_bench_press

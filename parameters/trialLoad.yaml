@@ -1,0 +1,19 @@
+group: trialLoad
+target: parameters
+ruleId: TRIAL-LOAD
+values:
+  incrementKg: 10
+  approachReps: 5
+  rirStop: 4
+  rirRepeat: 4
+  repeatIncrementPct: 10
+provisional: true
+principles:
+- P-EPLEY
+- P-1RM-ESTIMATE-RANGE
+- P-RIR-ACCURACY
+engineConstraints:
+  maxRepsPlusRir: 10
+  note:
+    it: Il motore propone la serie di prova solo se il minimo dell'intervallo di ripetizioni più il RIR
+      target più alto del mesociclo non supera questo valore.

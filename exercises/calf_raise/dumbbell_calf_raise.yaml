@@ -1,0 +1,17 @@
+id: dumbbell_calf_raise
+name:
+  it: Calf raise con manubri
+  en: Dumbbell calf raise
+equipment: dumbbell
+requires:
+- dumbbells
+pattern: calf_raise
+mechanics: isolation
+muscles:
+  primary: calves
+  secondary: []
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- standing_calf_raise

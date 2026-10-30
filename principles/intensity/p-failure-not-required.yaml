@@ -1,0 +1,20 @@
+id: P-FAILURE-NOT-REQUIRED
+topic: intensity
+statement:
+  it: Il cedimento muscolare non migliora forza, ipertrofia o potenza; basta arrivare vicino, indicativamente
+    a 2-3 RIR. Non ci sono prove per fissare RIR esatti.
+  en: Muscular failure does not improve strength, hypertrophy or power; getting close, roughly 2-3 RIR,
+    is enough. There is no evidence for exact RIR targets.
+evidence: high
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/mesocycle
+sources:
+- id: acsm-2026-resistance-training
+  pages:
+  - 865
+  - 866
+  access: full_text
+- id: refalo-2023-failure-hypertrophy
+  access: full_text

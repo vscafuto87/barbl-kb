@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://barbl/kb/source.schema.json",
+  "title": "Fonte",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "type",
+    "tier",
+    "title",
+    "use"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+    },
+    "type": {
+      "enum": [
+        "position_stand",
+        "meta_analysis",
+        "rct",
+        "validation_study",
+        "review",
+        "book",
+        "program",
+        "design"
+      ]
+    },
+    "tier": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "title": {
+      "type": "string"
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "year": {
+      "type": "integer"
+    },
+    "reference": {
+      "type": "string"
+    },
+    "doi": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "license": {
+      "type": "string"
+    },
+    "localFile": {
+      "type": "string"
+    },
+    "use": {
+      "enum": [
+        "public",
+        "internal"
+      ]
+    },
+    "readNote": {
+      "type": "string"
+    }
+  }
+}

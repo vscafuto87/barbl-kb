@@ -1,0 +1,18 @@
+id: dumbbell_romanian_deadlift
+name:
+  it: Stacco rumeno con manubri
+  en: Dumbbell Romanian deadlift
+equipment: dumbbell
+requires:
+- dumbbells
+pattern: hinge
+mechanics: compound
+muscles:
+  primary: hamstrings
+  secondary:
+  - glutes
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- romanian_deadlift

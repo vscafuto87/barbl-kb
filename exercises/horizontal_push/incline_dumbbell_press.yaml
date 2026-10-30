@@ -1,0 +1,21 @@
+id: incline_dumbbell_press
+name:
+  it: Panca inclinata con manubri
+  en: Incline dumbbell press
+equipment: dumbbell
+requires:
+- dumbbells
+- bench
+pattern: horizontal_push
+mechanics: compound
+muscles:
+  primary: chest
+  secondary:
+  - front_delts
+  - triceps
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- dumbbell_bench_press
+- machine_chest_press

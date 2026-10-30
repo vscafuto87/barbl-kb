@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "goal": "muscle_gain",
+  "gym": {
+    "type": "full",
+    "equipment": [
+      "barbell",
+      "rack",
+      "bench",
+      "dumbbells",
+      "machines",
+      "cables",
+      "smith_machine"
+    ],
+    "barKg": 20,
+    "platesKg": [
+      25,
+      20,
+      15,
+      10,
+      5,
+      2.5,
+      1.25
+    ]
+  },
+  "daysPerWeek": 4,
+  "sessionDurationMin": 60,
+  "experience": "6_months_2_years",
+  "knownLoads": [
+    {
+      "exerciseId": "barbell_bench_press",
+      "kg": 80,
+      "reps": 8
+    },
+    {
+      "exerciseId": "dumbbell_row",
+      "kg": 32,
+      "reps": 11
+    },
+    {
+      "exerciseId": "military_press",
+      "kg": 47.5,
+      "reps": 7
+    },
+    {
+      "exerciseId": "squat",
+      "kg": null,
+      "reps": null
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+group: move
+target: parameters
+ruleId: MOVE-SESSION
+values:
+  minRestHours:
+    lower: 48
+    upper: 24
+  shiftsWeek: false
+provisional: true
+principles:
+- P-RECOVERY-48H

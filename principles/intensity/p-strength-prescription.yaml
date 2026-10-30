@@ -1,0 +1,18 @@
+id: P-STRENGTH-PRESCRIPTION
+topic: intensity
+statement:
+  it: 'Per la forza: carichi da almeno l''80% del massimale, escursione completa, 2-3 serie per seduta,
+    esercizio all''inizio della seduta.'
+  en: 'For strength: loads of at least 80% of 1RM, full range of motion, 2-3 sets per session, the lift
+    early in the session.'
+evidence: high
+status: provisional
+reviewedBy: null
+feeds:
+- prescriptions
+sources:
+- id: acsm-2026-resistance-training
+  pages:
+  - 851
+  - 855
+  access: full_text

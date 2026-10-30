@@ -1,0 +1,13 @@
+ruleId: PROG-RIR-CORRECTION
+key: correction.setBelow
+level: set
+text:
+  it: 'Serie {setNumber} a RIR {rir}: per la {nextSetNumber} ti propongo **{kg} kg**.'
+  en: 'Set {setNumber} at {rir} RIR: for set {nextSetNumber} I suggest **{kg} kg**.'
+exampleValues:
+  setNumber: 2
+  rir: 1
+  nextSetNumber: 3
+  kg: 80
+principles:
+- P-RIR-CORRECTION

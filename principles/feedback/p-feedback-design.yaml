@@ -1,0 +1,15 @@
+id: P-FEEDBACK-DESIGN
+topic: feedback
+statement:
+  it: Il feedback a fine esercizio (facile, giusta, al limite, fastidio) copre ciò che il RIR non dice,
+    senza domande obbligatorie; il RIR registrato prevale.
+  en: End-of-exercise feedback (easy, right, at the limit, discomfort) covers what RIR does not say, with
+    no mandatory questions; recorded RIR wins.
+evidence: design
+status: provisional
+reviewedBy: null
+feeds:
+- parameters/feedback
+sources:
+- id: barbl-design
+  access: full_text

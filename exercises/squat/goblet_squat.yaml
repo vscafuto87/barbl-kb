@@ -1,0 +1,19 @@
+id: goblet_squat
+name:
+  it: Goblet squat
+  en: Goblet squat
+equipment: dumbbell
+requires:
+- dumbbells
+pattern: squat
+mechanics: compound
+muscles:
+  primary: quadriceps
+  secondary:
+  - glutes
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- bulgarian_split_squat
+- leg_press

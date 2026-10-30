@@ -1,0 +1,15 @@
+id: P-VOL-DOSE-STR
+topic: volume
+statement:
+  it: 'Per la forza il volume rende molto meno: oltre circa 5 serie frazionarie a settimana le serie in
+    più non danno un guadagno chiaro.'
+  en: 'For strength, volume pays off much less: beyond about 5 fractional sets per week extra sets give
+    no clear gain.'
+evidence: high
+status: provisional
+reviewedBy: null
+feeds:
+- prescriptions
+sources:
+- id: pelland-2026-volume-frequency
+  access: full_text_preprint

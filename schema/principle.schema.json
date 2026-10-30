@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://barbl/kb/principle.schema.json",
+  "title": "Principio",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "topic",
+    "statement",
+    "evidence",
+    "status",
+    "reviewedBy",
+    "feeds",
+    "sources"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^P-[A-Z0-9-]+$"
+    },
+    "topic": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]*$"
+    },
+    "statement": {
+      "type": "object",
+      "required": [
+        "it",
+        "en"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "it": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "evidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low",
+        "design"
+      ]
+    },
+    "status": {
+      "enum": [
+        "provisional",
+        "confirmed"
+      ]
+    },
+    "reviewedBy": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "feeds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "access"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9_-]*$"
+          },
+          "pages": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "access": {
+            "enum": [
+              "full_text",
+              "full_text_preprint",
+              "abstract_only",
+              "summary"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "with",
+          "status"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "with": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "open",
+              "resolved",
+              "deferred"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

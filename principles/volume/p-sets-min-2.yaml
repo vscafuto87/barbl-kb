@@ -1,0 +1,15 @@
+id: P-SETS-MIN-2
+topic: volume
+statement:
+  it: Almeno 2 serie per esercizio; oltre, i benefici calano a ogni serie in più.
+  en: At least 2 sets per exercise; beyond that, benefits shrink with each extra set.
+evidence: medium
+status: provisional
+reviewedBy: null
+feeds:
+- prescriptions
+sources:
+- id: acsm-2026-resistance-training
+  pages:
+  - 865
+  access: full_text

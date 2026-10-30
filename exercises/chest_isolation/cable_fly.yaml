@@ -1,0 +1,17 @@
+id: cable_fly
+name:
+  it: Croci ai cavi
+  en: Cable fly
+equipment: cable
+requires:
+- cables
+pattern: chest_isolation
+mechanics: isolation
+muscles:
+  primary: chest
+  secondary: []
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- dumbbell_fly

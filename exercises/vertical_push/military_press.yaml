@@ -1,0 +1,20 @@
+id: military_press
+name:
+  it: Military press
+  en: Military press
+equipment: barbell
+requires:
+- barbell
+- rack
+pattern: vertical_push
+mechanics: compound
+muscles:
+  primary: shoulders
+  secondary:
+  - triceps
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: trial_set
+substitutes:
+- seated_dumbbell_shoulder_press
+- machine_shoulder_press

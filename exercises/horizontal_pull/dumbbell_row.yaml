@@ -1,0 +1,21 @@
+id: dumbbell_row
+name:
+  it: Rematore con manubrio
+  en: Dumbbell row
+equipment: dumbbell
+requires:
+- dumbbells
+- bench
+pattern: horizontal_pull
+mechanics: compound
+muscles:
+  primary: back
+  secondary:
+  - biceps
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- seated_cable_row
+- chest_supported_dumbbell_row
+- barbell_row

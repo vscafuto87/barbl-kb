@@ -1,0 +1,15 @@
+id: P-TIME-PER-SET
+topic: structure
+statement:
+  it: 'Una serie di lavoro, recupero e riscaldamenti compresi, occupa circa 3 minuti: valore ricavato
+    dalle durate del piano fisso dell''app.'
+  en: 'A working set, including rest and warm-ups, takes about 3 minutes: value derived from the durations
+    of the app''s fixed plan.'
+evidence: design
+status: provisional
+reviewedBy: null
+feeds:
+- prescriptions
+sources:
+- id: barbl-design
+  access: full_text

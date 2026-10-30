@@ -1,0 +1,18 @@
+id: romanian_deadlift
+name:
+  it: Stacco rumeno
+  en: Romanian deadlift
+equipment: barbell
+requires:
+- barbell
+pattern: hinge
+mechanics: compound
+muscles:
+  primary: hamstrings
+  secondary:
+  - glutes
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: trial_set
+substitutes:
+- dumbbell_romanian_deadlift

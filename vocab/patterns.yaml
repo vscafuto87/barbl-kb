@@ -1,0 +1,18 @@
+# Pattern di movimento. Il motore riempie gli slot dei template per pattern e la regola 12
+# (riscaldamento) si applica al primo multiarticolare di ogni pattern.
+# La suddivisione segue il principio P-PATTERNS (ACSM 2026): spinta e trazione per parte alta
+# e bassa, orizzontale e verticale per la parte alta; più gli isolamenti per distretto.
+patterns:
+  - { id: horizontal_push, region: upper, mechanics: compound,  name: { it: Spinta orizzontale, en: Horizontal push } }
+  - { id: vertical_push,   region: upper, mechanics: compound,  name: { it: Spinta verticale,   en: Vertical push } }
+  - { id: horizontal_pull, region: upper, mechanics: compound,  name: { it: Trazione orizzontale, en: Horizontal pull } }
+  - { id: vertical_pull,   region: upper, mechanics: compound,  name: { it: Trazione verticale, en: Vertical pull } }
+  - { id: squat,           region: lower, mechanics: compound,  name: { it: Accosciata,         en: Squat } }
+  - { id: lunge,           region: lower, mechanics: compound,  name: { it: Affondo,            en: Lunge } }
+  - { id: hinge,           region: lower, mechanics: compound,  name: { it: Piegamento d'anca,  en: Hip hinge } }
+  - { id: chest_isolation, region: upper, mechanics: isolation, name: { it: Isolamento petto,   en: Chest isolation } }
+  - { id: elbow_extension, region: upper, mechanics: isolation, name: { it: Estensione del gomito, en: Elbow extension } }
+  - { id: elbow_flexion,   region: upper, mechanics: isolation, name: { it: Flessione del gomito,  en: Elbow flexion } }
+  - { id: knee_extension,  region: lower, mechanics: isolation, name: { it: Estensione del ginocchio, en: Knee extension } }
+  - { id: knee_flexion,    region: lower, mechanics: isolation, name: { it: Flessione del ginocchio, en: Knee flexion } }
+  - { id: calf_raise,      region: lower, mechanics: isolation, name: { it: Polpacci,           en: Calf raise } }

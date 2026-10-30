@@ -1,0 +1,9 @@
+ruleId: EXERCISE-FEEDBACK
+key: feedback.exercise
+level: set
+text:
+  it: 'Hai segnato l''esercizio come facile: la prossima volta {outcome}.'
+  en: 'You marked this exercise as easy: next time {outcome}.'
+exampleValues:
+  outcome: +2,5 kg
+sourcesFrom: parameters/feedback

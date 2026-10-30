@@ -1,0 +1,17 @@
+id: P-FREQ-STR
+topic: frequency
+statement:
+  it: La forza migliora con frequenze più alte dello stesso esercizio, con rendimenti decrescenti.
+  en: Strength improves with higher frequency of the same lift, with diminishing returns.
+evidence: high
+status: provisional
+reviewedBy: null
+feeds:
+- templates
+sources:
+- id: acsm-2026-resistance-training
+  pages:
+  - 855
+  access: full_text
+- id: pelland-2026-volume-frequency
+  access: full_text_preprint

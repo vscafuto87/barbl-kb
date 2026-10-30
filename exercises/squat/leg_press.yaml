@@ -1,0 +1,19 @@
+id: leg_press
+name:
+  it: Leg press
+  en: Leg press
+equipment: machine
+requires:
+- machines
+pattern: squat
+mechanics: compound
+muscles:
+  primary: quadriceps
+  secondary:
+  - glutes
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- squat
+- goblet_squat

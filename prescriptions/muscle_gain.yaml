@@ -1,0 +1,49 @@
+id: muscle_gain
+appliesTo:
+- muscle_gain
+- both
+roles:
+  main:
+    sets: 4
+    reps:
+      min: 6
+      max: 8
+    restSeconds:
+      upper: 150
+      lower: 180
+    rirFollowsMesocycle: true
+    warmup: true
+  secondary:
+    sets: 3
+    reps:
+      min: 8
+      max: 12
+    restSeconds:
+      upper: 120
+      lower: 120
+    rirFollowsMesocycle: true
+    warmup: false
+  accessory:
+    sets: 3
+    reps:
+      min: 10
+      max: 12
+    restSeconds:
+      upper: 90
+      lower: 90
+    rirFollowsMesocycle: true
+    warmup: false
+supersetRestSeconds: 120
+timeBudget:
+  minutesPerSet: 3
+provisional: true
+principles:
+- P-VOL-MIN-10
+- P-SETS-MIN-2
+- P-RIR-ACCURACY
+- P-REST-NEUTRAL
+- P-TIME-PER-SET
+notes:
+  it: 'Valori provvisori ripresi dal piano fisso (panca 4 serie, recuperi 2:30 e 3:00, superset 2:00,
+    isolamenti 1:30). Le ripetizioni dei complementari si fermano a 12 per il principio P-RIR-ACCURACY.
+    L''obiettivo strength non ha ancora prescrizioni proprie: usa queste solo se il profilo dice both.'

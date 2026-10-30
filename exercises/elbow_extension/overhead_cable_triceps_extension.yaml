@@ -1,0 +1,18 @@
+id: overhead_cable_triceps_extension
+name:
+  it: Estensioni sopra la testa ai cavi
+  en: Overhead cable triceps extension
+equipment: cable
+requires:
+- cables
+pattern: elbow_extension
+mechanics: isolation
+muscles:
+  primary: triceps
+  secondary: []
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- dumbbell_overhead_triceps_extension
+- cable_triceps_pushdown

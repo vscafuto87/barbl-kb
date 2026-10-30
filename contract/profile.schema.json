@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "barbl/profile.schema.json",
+  "title": "Profilo di allenamento",
+  "description": "Input del motore: ciò che l'onboarding raccoglie.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "goal",
+    "gym",
+    "daysPerWeek",
+    "sessionDurationMin",
+    "experience",
+    "knownLoads"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "goal": {
+      "enum": [
+        "muscle_gain",
+        "strength",
+        "both"
+      ]
+    },
+    "gym": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "equipment"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "full",
+            "home",
+            "dumbbells"
+          ]
+        },
+        "equipment": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Identificativi dell'attrezzatura disponibile, es. barbell, rack, cables"
+        },
+        "barKg": {
+          "type": "number",
+          "default": 20
+        },
+        "platesKg": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "default": [
+            25,
+            20,
+            15,
+            10,
+            5,
+            2.5,
+            1.25
+          ]
+        }
+      }
+    },
+    "daysPerWeek": {
+      "enum": [
+        3,
+        4,
+        5
+      ]
+    },
+    "sessionDurationMin": {
+      "enum": [
+        45,
+        60,
+        75,
+        90
+      ]
+    },
+    "experience": {
+      "enum": [
+        "under_6_months",
+        "6_months_2_years",
+        "over_2_years"
+      ]
+    },
+    "knownLoads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "exerciseId"
+        ],
+        "properties": {
+          "exerciseId": {
+            "type": "string"
+          },
+          "kg": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "null = l'utente ha risposto Non lo so"
+          },
+          "reps": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

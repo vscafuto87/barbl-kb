@@ -1,0 +1,19 @@
+id: seated_cable_row
+name:
+  it: Pulley basso
+  en: Seated cable row
+equipment: cable
+requires:
+- cables
+pattern: horizontal_pull
+mechanics: compound
+muscles:
+  primary: back
+  secondary:
+  - biceps
+loading:
+  stepKg: 2.5
+  whenLoadUnknown: manual
+substitutes:
+- chest_supported_dumbbell_row
+- dumbbell_row

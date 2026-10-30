@@ -1,0 +1,17 @@
+id: push_up
+name:
+  it: Piegamenti
+  en: Push-up
+equipment: bodyweight
+requires: []
+pattern: horizontal_push
+mechanics: compound
+muscles:
+  primary: chest
+  secondary:
+  - triceps
+  - front_delts
+loading:
+  whenLoadUnknown: manual
+substitutes:
+- dumbbell_bench_press

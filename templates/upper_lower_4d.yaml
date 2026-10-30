@@ -1,0 +1,206 @@
+id: upper_lower_4d
+split: upper_lower
+daysPerWeek: 4
+goals:
+- muscle_gain
+- both
+defaultSchedule:
+  mon: upper_b
+  wed: lower_b
+  thu: upper_a
+  sat: lower_a
+sessions:
+- id: upper_a
+  name:
+    it: Upper A
+    en: Upper A
+  focus: upper_body
+  blocks:
+  - type: single
+    slots:
+    - pattern: horizontal_push
+      role: main
+      candidates:
+      - barbell_bench_press
+      - dumbbell_bench_press
+      - machine_chest_press
+      - push_up
+  - type: superset
+    label: A
+    slots:
+    - pattern: horizontal_pull
+      role: secondary
+      candidates:
+      - dumbbell_row
+      - seated_cable_row
+      - barbell_row
+    - pattern: vertical_push
+      role: secondary
+      candidates:
+      - military_press
+      - seated_dumbbell_shoulder_press
+      - machine_shoulder_press
+      repsOverride:
+        min: 6
+        max: 8
+      overrideReason:
+        it: 'Come nel piano fisso dell''app: il carico noto del profilo d''esempio (47,5 kg × 7) sta in
+          6-8, non nell''intervallo del ruolo secondario.'
+  - type: single
+    slots:
+    - pattern: vertical_pull
+      role: secondary
+      candidates:
+      - lat_pulldown
+      - chest_supported_dumbbell_row
+  - type: superset
+    label: B
+    slots:
+    - pattern: elbow_extension
+      role: accessory
+      candidates:
+      - overhead_cable_triceps_extension
+      - dumbbell_overhead_triceps_extension
+      - barbell_skull_crusher
+    - pattern: elbow_flexion
+      role: accessory
+      candidates:
+      - dumbbell_curl
+      - cable_curl
+      - barbell_curl
+- id: lower_a
+  name:
+    it: Lower A
+    en: Lower A
+  focus: legs
+  blocks:
+  - type: single
+    slots:
+    - pattern: squat
+      role: main
+      candidates:
+      - squat
+      - leg_press
+      - goblet_squat
+  - type: single
+    slots:
+    - pattern: knee_flexion
+      role: accessory
+      candidates:
+      - leg_curl
+      - dumbbell_romanian_deadlift
+  - type: single
+    slots:
+    - pattern: knee_extension
+      role: accessory
+      candidates:
+      - leg_extension
+      - bulgarian_split_squat
+      - goblet_squat
+  - type: single
+    slots:
+    - pattern: calf_raise
+      role: accessory
+      candidates:
+      - standing_calf_raise
+      - dumbbell_calf_raise
+- id: upper_b
+  name:
+    it: Upper B
+    en: Upper B
+  focus: upper_body
+  blocks:
+  - type: single
+    slots:
+    - pattern: horizontal_push
+      role: main
+      candidates:
+      - incline_dumbbell_press
+      - machine_chest_press
+      - push_up
+  - type: single
+    slots:
+    - pattern: horizontal_pull
+      role: secondary
+      candidates:
+      - seated_cable_row
+      - chest_supported_dumbbell_row
+      - barbell_row
+  - type: single
+    slots:
+    - pattern: vertical_pull
+      role: secondary
+      candidates:
+      - lat_pulldown
+      - dumbbell_row
+  - type: single
+    slots:
+    - pattern: chest_isolation
+      role: accessory
+      candidates:
+      - cable_fly
+      - dumbbell_fly
+      - push_up
+  - type: superset
+    label: A
+    slots:
+    - pattern: elbow_flexion
+      role: accessory
+      candidates:
+      - cable_curl
+      - dumbbell_curl
+      - barbell_curl
+    - pattern: elbow_extension
+      role: accessory
+      candidates:
+      - cable_triceps_pushdown
+      - dumbbell_overhead_triceps_extension
+      - barbell_skull_crusher
+- id: lower_b
+  name:
+    it: Lower B
+    en: Lower B
+  focus: legs
+  blocks:
+  - type: single
+    slots:
+    - pattern: hinge
+      role: main
+      candidates:
+      - romanian_deadlift
+      - dumbbell_romanian_deadlift
+  - type: single
+    slots:
+    - pattern: squat
+      role: secondary
+      candidates:
+      - leg_press
+      - goblet_squat
+      - smith_machine_squat
+  - type: single
+    slots:
+    - pattern: lunge
+      role: secondary
+      candidates:
+      - bulgarian_split_squat
+      - dumbbell_walking_lunge
+  - type: single
+    slots:
+    - pattern: knee_flexion
+      role: accessory
+      candidates:
+      - leg_curl
+      - dumbbell_romanian_deadlift
+principles:
+- P-FREQ-MIN-2
+- P-FREQ-HYP-NEUTRAL
+- P-PATTERNS
+- P-VOL-MIN-10
+structureSources:
+- id: nippard-essentials
+  note: 'struttura della seduta Upper della versione 4x: spinta orizzontale pesante, trazioni, spinta
+    verticale, superset di braccia'
+notes:
+  it: Upper A e Lower A partono dal piano fisso dell'app (panca, superset rematore e military, squat,
+    leg curl); il resto completa gli slot che nel piano fisso erano da definire. Per ogni slot il motore
+    sceglie il primo candidato disponibile nella palestra del profilo.

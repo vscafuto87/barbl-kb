@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://barbl/kb/exercise.schema.json",
+  "title": "Esercizio",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "equipment",
+    "requires",
+    "pattern",
+    "mechanics",
+    "muscles",
+    "loading",
+    "substitutes"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_]+$"
+    },
+    "name": {
+      "type": "object",
+      "required": [
+        "it",
+        "en"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "it": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "equipment": {
+      "type": "string"
+    },
+    "requires": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pattern": {
+      "type": "string"
+    },
+    "mechanics": {
+      "enum": [
+        "compound",
+        "isolation"
+      ]
+    },
+    "muscles": {
+      "type": "object",
+      "required": [
+        "primary",
+        "secondary"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "primary": {
+          "type": "string"
+        },
+        "secondary": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "loading": {
+      "type": "object",
+      "required": [
+        "whenLoadUnknown"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "stepKg": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "whenLoadUnknown": {
+          "enum": [
+            "trial_set",
+            "manual"
+          ]
+        }
+      }
+    },
+    "substitutes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sources": {
+      "type": "array"
+    }
+  }
+}
